@@ -7,7 +7,7 @@ const AuthContext = createContext(null);
 // Where each role lands right after login.
 export const ROLE_HOME = {
   Candidate: '/candidate/dashboard',
-  Recruiter: '/recruiter/jobs',
+  Recruiter: '/recruiter/dashboard',
   HiringManager: '/manager/shortlist',
   Admin: '/admin/users'
 };
