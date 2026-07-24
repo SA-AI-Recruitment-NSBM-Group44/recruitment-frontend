@@ -7,13 +7,13 @@ import Register from './pages/Register.jsx';
 import NotAuthorized from './pages/NotAuthorized.jsx';
 
 import CandidateDashboard from './pages/candidate/Dashboard.jsx';
-<<<<<<< HEAD
+ HEAD
 import Recommendations from './pages/candidate/Recommendations.jsx';
 
-=======
+
 import CandidateApplications from './pages/candidate/Applications.jsx';
 import ApplicationDetail from './pages/candidate/ApplicationDetail.jsx';
->>>>>>> f8f41e311d4b48a07ea3678ce7fceb3d53c90b43
+f8f41e311d4b48a07ea3678ce7fceb3d53c90b43
 import RecruiterJobs from './pages/recruiter/Jobs.jsx';
 import NewJob from './pages/recruiter/NewJob.jsx';
 import ManagerShortlist from './pages/manager/Shortlist.jsx';
@@ -52,6 +52,9 @@ export default function App() {
       {/* Candidate Routes */}
 
       <Route element={<ProtectedRoute roles={['Candidate']} />}>
+ feature/candidate-profile
+      <Route path="/candidate/dashboard" element={<CandidateDashboard />} />
+
 
         <Route 
           path="/candidate/dashboard" 
@@ -63,6 +66,7 @@ export default function App() {
           element={<Recommendations />} 
         />
 
+ dev
       </Route>
 
 
@@ -70,7 +74,7 @@ export default function App() {
       {/* Recruiter Routes */}
 
       <Route element={<ProtectedRoute roles={['Recruiter']} />}>
-<<<<<<< HEAD
+ HEAD
 
         <Route 
           path="/recruiter/jobs" 
@@ -78,7 +82,7 @@ export default function App() {
         />
 
       </Route>
-=======
+
     <Route
         path="/recruiter/dashboard"
         element={<RecruiterDashboard />}
@@ -94,7 +98,7 @@ export default function App() {
         element={<NewJob />}
     />
 </Route>
->>>>>>> f8f41e311d4b48a07ea3678ce7fceb3d53c90b43
+ f8f41e311d4b48a07ea3678ce7fceb3d53c90b43
 
 
 
