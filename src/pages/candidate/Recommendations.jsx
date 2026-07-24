@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import client from "../../api/client";
 import MatchScoreBadge from "../../components/MatchScoreBadge.jsx";
@@ -344,3 +345,6 @@ export default function Recommendations() {
 
 
 }
+=======
+﻿
+>>>>>>> 4b7e401 (Frontend updates)
