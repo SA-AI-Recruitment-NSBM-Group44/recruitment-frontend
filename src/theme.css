@@ -148,3 +148,51 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; }
   .auth-shell { grid-template-columns: 1fr; }
   .auth-brand { display: none; }
 }
+
+
+.recommend-button-container{
+
+    margin-top:30px;
+    text-align:center;
+
+}
+
+
+.recommend-button{
+
+    padding:14px 28px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 8px 20px rgba(37,99,235,0.25);
+
+    transition:0.3s;
+
+}
+
+
+.recommend-button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 12px 25px rgba(124,58,237,0.35);
+
+}
