@@ -7,6 +7,10 @@ dist/
 # Environment files
 .env
 .env.local
+feature/candidate-profile
 
 # Visual Studio files
 .vs/
+
+.vs/ 
+ dev
