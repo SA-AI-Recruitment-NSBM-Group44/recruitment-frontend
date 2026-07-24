@@ -7,23 +7,21 @@ import Register from './pages/Register.jsx';
 import NotAuthorized from './pages/NotAuthorized.jsx';
 
 import CandidateDashboard from './pages/candidate/Dashboard.jsx';
- HEAD
 import Recommendations from './pages/candidate/Recommendations.jsx';
-
 import CandidateApplications from './pages/candidate/Applications.jsx';
 import ApplicationDetail from './pages/candidate/ApplicationDetail.jsx';
-f8f41e311d4b48a07ea3678ce7fceb3d53c90b43
+
 import RecruiterJobs from './pages/recruiter/Jobs.jsx';
 import NewJob from './pages/recruiter/NewJob.jsx';
+import RecruiterDashboard from './pages/recruiter/Dashboard.jsx';
+
 import ManagerShortlist from './pages/manager/Shortlist.jsx';
 import AdminUsers from './pages/admin/Users.jsx';
-import RecruiterDashboard from './pages/recruiter/Dashboard.jsx';
 
 
 export default function App() {
 
   const { user } = useAuth();
-
 
   return (
 
@@ -47,7 +45,6 @@ export default function App() {
       />
 
 
-
       {/* Candidate Routes */}
 
       <Route element={<ProtectedRoute roles={['Candidate']} />}>
@@ -62,6 +59,16 @@ export default function App() {
           element={<Recommendations />} 
         />
 
+        <Route 
+          path="/candidate/applications" 
+          element={<CandidateApplications />} 
+        />
+
+        <Route 
+          path="/candidate/applications/:id" 
+          element={<ApplicationDetail />} 
+        />
+
       </Route>
 
 
@@ -69,31 +76,23 @@ export default function App() {
       {/* Recruiter Routes */}
 
       <Route element={<ProtectedRoute roles={['Recruiter']} />}>
-<<<<<<< HEAD
+
+        <Route 
+          path="/recruiter/dashboard" 
+          element={<RecruiterDashboard />} 
+        />
 
         <Route 
           path="/recruiter/jobs" 
           element={<RecruiterJobs />} 
         />
 
+        <Route 
+          path="/recruiter/jobs/new" 
+          element={<NewJob />} 
+        />
+
       </Route>
-=======
-    <Route
-        path="/recruiter/dashboard"
-        element={<RecruiterDashboard />}
-    />
-
-    <Route
-        path="/recruiter/jobs"
-        element={<RecruiterJobs />}
-    />
-
-    <Route
-        path="/recruiter/jobs/new"
-        element={<NewJob />}
-    />
-</Route>
->>>>>>> f8f41e311d4b48a07ea3678ce7fceb3d53c90b43
 
 
 
@@ -134,11 +133,10 @@ export default function App() {
               ? (ROLE_HOME[user.role] ?? '/login') 
               : '/login'
             } 
-            replace 
+            replace
           />
-        } 
+        }
       />
-
 
     </Routes>
 
