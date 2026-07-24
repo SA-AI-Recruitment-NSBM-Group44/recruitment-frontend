@@ -25,6 +25,7 @@ body {
 
 h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; }
 
+
 /* ===== Auth split layout ===== */
 .auth-shell { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; }
 
@@ -147,4 +148,313 @@ h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; }
 @media (max-width: 860px) {
   .auth-shell { grid-template-columns: 1fr; }
   .auth-brand { display: none; }
+}
+
+/* ===== Recruiter Jobs ===== */
+
+.jobs-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+    .jobs-header p {
+        color: var(--ink-soft);
+        margin-top: 6px;
+    }
+
+.new-job-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all .25s ease;
+}
+
+.new-job-btn:hover {
+    background: var(--primary-deep);
+    transform: translateY(-2px);
+}
+
+.jobs-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:10px;
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+    overflow-x:auto;
+}
+
+.jobs-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.jobs-table th{
+    background:#f9fafb;
+    padding:18px;
+    font-size:15px;
+    font-weight:700;
+    border-bottom:2px solid var(--line);
+    text-align:left;
+}
+
+.jobs-table td{
+    padding:18px;
+    border-bottom:1px solid var(--line);
+    vertical-align:middle;
+}
+
+.empty-row {
+    text-align: center;
+    color: var(--ink-soft);
+    padding: 40px;
+}
+
+.delete-btn {
+    background: #dc2626;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+.close-btn{
+    background:#f59e0b;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.2s;
+}
+
+.close-btn:hover{
+    background:#d97706;
+}
+
+.applied-btn {
+    background-color: #16a34a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: not-allowed;
+    opacity: 0.95;
+    transition: 0.3s;
+}
+
+.applied-btn:hover {
+    background-color: #16a34a;
+}
+
+/* ===== Application Status Badges ===== */
+
+.status-badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:6px 12px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:600;
+    color:white;
+    min-width:85px;
+}
+
+.status-badge.submitted {
+    background: #f59e0b;
+}
+
+.status-badge.under-review,
+.status-badge.underreview {
+    background: #2563eb;
+}
+
+.status-badge.shortlisted {
+    background: #16a34a;
+}
+
+.status-badge.interviewing {
+    background: #8b5cf6;
+}
+
+.status-badge.offered {
+    background: #0f766e;
+}
+
+.status-badge.rejected {
+    background: #dc2626;
+}
+
+
+.delete-btn,
+.close-btn,
+.applied-btn{
+    transition:.25s;
+}
+
+.delete-btn:hover,
+.close-btn:hover,
+.applied-btn:hover{
+    transform:translateY(-2px);
+}
+
+
+
+/* ===== Application Action Buttons ===== */
+
+.review-btn,
+.shortlist-btn,
+.reject-btn {
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s ease;
+    white-space: nowrap;
+    min-width: 110px;
+}
+
+.review-btn {
+    background: #f59e0b;
+}
+
+.review-btn:hover {
+    background: #d97706;
+}
+
+.shortlist-btn {
+    background: #16a34a;
+}
+
+.shortlist-btn:hover {
+    background: #15803d;
+}
+
+.reject-btn {
+    background: #dc2626;
+}
+
+.reject-btn:hover {
+    background: #b91c1c;
+}
+
+
+/* ===== Recruiter Job Status ===== */
+
+.status-badge.published {
+    background: #16a34a;
+}
+
+.status-badge.closed {
+    background: #dc2626;
+}
+
+.status-badge.draft {
+    background: #f59e0b;
+}
+
+
+.new-job-btn,
+.delete-btn,
+.close-btn{
+    padding:8px 14px;
+    border:none;
+    border-radius:8px;
+    font-size:13px;
+    font-weight:600;
+    cursor:pointer;
+    white-space:nowrap;
+}
+
+
+.applications-btn{
+    background:#4f46e5;
+    color:#fff;
+    border:none;
+    padding:8px 12px;
+    margin-left:6px;
+    border-radius:8px;
+    font-size:13px;
+    font-weight:600;
+    cursor:pointer;
+    white-space:nowrap;
+    transition:.25s;
+}
+
+.applications-btn:hover{
+    background:#3730a3;
+}
+
+
+
+.applications-btn{
+    background:#4f46e5;
+    color:#fff;
+    border:none;
+    padding:8px 16px;
+    border-radius:8px;
+    font-size:13px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.applications-btn:hover{
+    background:#3730a3;
+    transform:translateY(-2px);
+}
+
+
+
+
+
+/* All action buttons same size */
+
+.action-btn,
+.applications-btn{
+
+    height:38px;
+    min-width:90px;
+
+    padding:0 14px;
+
+    font-size:13px;
+
+    border-radius:8px;
+
+    white-space:nowrap;
+
+}
+
+.applications-btn{
+
+    background:#4f46e5;
+    color:white;
+    border:none;
+    cursor:pointer;
+    transition:.25s;
+
+}
+
+.applications-btn:hover{
+
+    background:#3730a3;
+
 }
