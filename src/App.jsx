@@ -7,13 +7,12 @@ import Register from './pages/Register.jsx';
 import NotAuthorized from './pages/NotAuthorized.jsx';
 
 import CandidateDashboard from './pages/candidate/Dashboard.jsx';
-<<<<<<< HEAD
+ HEAD
 import Recommendations from './pages/candidate/Recommendations.jsx';
 
-=======
 import CandidateApplications from './pages/candidate/Applications.jsx';
 import ApplicationDetail from './pages/candidate/ApplicationDetail.jsx';
->>>>>>> f8f41e311d4b48a07ea3678ce7fceb3d53c90b43
+f8f41e311d4b48a07ea3678ce7fceb3d53c90b43
 import RecruiterJobs from './pages/recruiter/Jobs.jsx';
 import NewJob from './pages/recruiter/NewJob.jsx';
 import ManagerShortlist from './pages/manager/Shortlist.jsx';

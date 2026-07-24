@@ -159,14 +159,13 @@ body::after{
     z-index:-1;
 
 }
-
-<<<<<<< HEAD
+HEAD
 
 .recommend-button-container{
 
     margin-top:30px;
     text-align:center;
-=======
+
 @keyframes moveBackground{
 
     from{
@@ -192,16 +191,16 @@ body::after{
     100%{
         transform:translateY(0);
     }
->>>>>>> f8f41e311d4b48a07ea3678ce7fceb3d53c90b43
+ f8f41e311d4b48a07ea3678ce7fceb3d53c90b43
 
 }
 
 
-<<<<<<< HEAD
+ HEAD
 .recommend-button{
 
     padding:14px 28px;
-=======
+
 /* ===========================
         AUTH LAYOUT
 =========================== */
@@ -1304,7 +1303,7 @@ animation:fadeUp .7s ease;
 
     border-radius:12px;
 
-<<<<<<< HEAD
+ HEAD
     background:linear-gradient(
         135deg,
         #2563eb,
@@ -1314,22 +1313,21 @@ animation:fadeUp .7s ease;
     color:white;
 
     font-size:16px;
-=======
+
     padding:10px 18px;
 
     font-size:14px;
->>>>>>> f8f41e311d4b48a07ea3678ce7fceb3d53c90b43
+f8f41e311d4b48a07ea3678ce7fceb3d53c90b43
 
     font-weight:600;
 
     cursor:pointer;
 
-<<<<<<< HEAD
+HEAD
     box-shadow:
     0 8px 20px rgba(37,99,235,0.25);
 
     transition:0.3s;
-=======
     transition:all .30s ease;
 
     box-shadow:
@@ -1381,19 +1379,17 @@ animation:fadeUp .7s ease;
         flex-wrap:wrap;
 
     }
->>>>>>> f8f41e311d4b48a07ea3678ce7fceb3d53c90b43
+f8f41e311d4b48a07ea3678ce7fceb3d53c90b43
 
 }
 
-
-<<<<<<< HEAD
+HEAD
 .recommend-button:hover{
 
     transform:translateY(-3px);
 
     box-shadow:
     0 12px 25px rgba(124,58,237,0.35);
-=======
 /* ===========================
         SCROLLBAR
 =========================== */
@@ -1640,6 +1636,4 @@ width:100%;
 gap:15px;
 
 }
->>>>>>> f8f41e311d4b48a07ea3678ce7fceb3d53c90b43
-
 }

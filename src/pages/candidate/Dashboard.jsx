@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+ HEAD
 import { Link } from 'react-router-dom';
 import Placeholder from '../../components/Placeholder.jsx';
 
@@ -30,7 +30,7 @@ export default function CandidateDashboard() {
 
     </div>
   );
-=======
+
 import Navbar from "../../components/Navbar.jsx";
 import { useNavigate } from "react-router-dom";
 
@@ -103,5 +103,5 @@ export default function CandidateDashboard() {
             </div>
         </>
     );
->>>>>>> f8f41e311d4b48a07ea3678ce7fceb3d53c90b43
-}
+f8f41e311d4b48a07ea3678ce7fceb3d53c90b43
+}}
