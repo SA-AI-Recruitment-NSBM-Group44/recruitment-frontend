@@ -21,7 +21,7 @@ export default function App() {
 
       {/* Candidate */}
       <Route element={<ProtectedRoute roles={['Candidate']} />}>
-        <Route path="/candidate/dashboard" element={<CandidateDashboard />} />
+      <Route path="/candidate/dashboard" element={<CandidateDashboard />} />
       </Route>
 
       {/* Recruiter */}
