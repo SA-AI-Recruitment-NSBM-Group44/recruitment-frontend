@@ -5,17 +5,13 @@ import Login from './pages/Login.jsx';
 import Register from './pages/Register.jsx';
 import NotAuthorized from './pages/NotAuthorized.jsx';
 import CandidateDashboard from './pages/candidate/Dashboard.jsx';
+import CandidateApplications from './pages/candidate/Applications.jsx';
+import ApplicationDetail from './pages/candidate/ApplicationDetail.jsx';
 import RecruiterJobs from './pages/recruiter/Jobs.jsx';
 import NewJob from './pages/recruiter/NewJob.jsx';
 import ManagerShortlist from './pages/manager/Shortlist.jsx';
 import AdminUsers from './pages/admin/Users.jsx';
-import EditJob from './pages/recruiter/EditJob.jsx';
-import CandidateJobs from "./pages/candidate/CandidateJobs.jsx";
-import MyApplications from "./pages/candidate/MyApplications.jsx";
-import RecruiterDashboard from "./pages/recruiter/Dashboard.jsx";
-import Applications from "./pages/recruiter/Applications.jsx";
-import JobDetails from "./pages/candidate/JobDetails.jsx";
-
+import RecruiterDashboard from './pages/recruiter/Dashboard.jsx';
 
 export default function App() {
   const { user } = useAuth();
@@ -29,36 +25,11 @@ export default function App() {
 
       {/* Candidate */}
       <Route element={<ProtectedRoute roles={['Candidate']} />}>
-    <Route
-        path="/candidate/dashboard"
-        element={<CandidateDashboard />}
-    />
-
-    <Route
-        path="/candidate/jobs"
-        element={<CandidateJobs />}
-    />
-
-    <Route
-    path="/candidate/jobs/:id"
-    element={<JobDetails />}
-    />
-
-    <Route
-        path="/candidate/applications"
-        element={<MyApplications />}
-    />
-</Route>
+        <Route path="/candidate/dashboard" element={<CandidateDashboard />} />
+      </Route>
 
       {/* Recruiter */}
       <Route element={<ProtectedRoute roles={['Recruiter']} />}>
-
-
-    <Route
-    path="/recruiter/jobs/:id/applications"
-    element={<Applications />}
-    />
-
     <Route
         path="/recruiter/dashboard"
         element={<RecruiterDashboard />}
@@ -73,14 +44,6 @@ export default function App() {
         path="/recruiter/jobs/new"
         element={<NewJob />}
     />
-
-    <Route
-        path="/recruiter/jobs/:id/edit"
-        element={<EditJob />}
-    />
-
-    
-
 </Route>
 
       {/* Hiring manager */}
