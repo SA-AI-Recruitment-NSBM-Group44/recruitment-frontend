@@ -1,26 +1,31 @@
 import axios from 'axios';
 
-// One axios instance for the whole app. Base URL comes from .env.
+const rawUrl = import.meta.env.VITE_API_URL || 'https://localhost:7001';
+const baseUrlClean = rawUrl.replace(/\/+$/, '').replace(/\/api$/, '');
+
 const client = axios.create({
-  baseURL: import.meta.env.VITE_API_URL
+  baseURL: baseUrlClean,
+  headers: {
+    'Content-Type': 'application/json',
+  },
 });
 
-// Attach the JWT to every request automatically.
 client.interceptors.request.use((config) => {
   const token = localStorage.getItem('recruitai_token');
-  if (token) config.headers.Authorization = `Bearer ${token}`;
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
   return config;
 });
 
-// Expired/invalid token? Clear it and send the user back to login.
 client.interceptors.response.use(
-  (res) => res,
-  (err) => {
-    if (err.response?.status === 401 && !err.config.url.includes('/api/auth/')) {
+  (response) => response,
+  (error) => {
+    if (error.response?.status === 401 && !error.config?.url?.includes('/api/auth/')) {
       localStorage.removeItem('recruitai_token');
       window.location.href = '/login';
     }
-    return Promise.reject(err);
+    return Promise.reject(error);
   }
 );
 

@@ -21,7 +21,25 @@ function readUserFromStorage() {
       localStorage.removeItem('recruitai_token');
       return null;
     }
-    return { id: decoded.sub, name: decoded.name, email: decoded.email, role: decoded.role };
+    const roleRaw =
+      decoded.role ||
+      decoded['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'] ||
+      decoded['role'];
+
+    let role = roleRaw;
+    if (roleRaw) {
+      const lower = roleRaw.toLowerCase().replace(/\s+/g, '');
+      if (lower === 'hiringmanager') role = 'HiringManager';
+      else if (lower === 'admin') role = 'Admin';
+      else if (lower === 'recruiter') role = 'Recruiter';
+      else if (lower === 'candidate') role = 'Candidate';
+    }
+
+    const sub = decoded.sub || decoded['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier'];
+    const email = decoded.email || decoded['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress'];
+    const name = decoded.name || decoded['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'] || email || 'User';
+
+    return { id: sub, name, email, role };
   } catch {
     localStorage.removeItem('recruitai_token');
     return null;
