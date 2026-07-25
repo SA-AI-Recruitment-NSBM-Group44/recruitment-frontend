@@ -63,6 +63,27 @@
   font-weight: 600;
 }
 
+.score-circle {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: conic-gradient(#4f46e5 0deg, #6366f1 280deg, #e2e8f0 280deg);
+  color: white;
+  font-weight: bold;
+}
+
+.score-circle strong {
+  font-size: 25px;
+}
+
+.score-circle span {
+  font-size: 12px;
+}
+
 .divider {
   height: 1px;
   background: #e5e7eb;

@@ -160,6 +160,13 @@ body::after{
 
 }
 
+<<<<<<< HEAD
+
+.recommend-button-container{
+
+    margin-top:30px;
+    text-align:center;
+=======
 @keyframes moveBackground{
 
     from{
@@ -185,10 +192,16 @@ body::after{
     100%{
         transform:translateY(0);
     }
+>>>>>>> f8f41e311d4b48a07ea3678ce7fceb3d53c90b43
 
 }
 
 
+<<<<<<< HEAD
+.recommend-button{
+
+    padding:14px 28px;
+=======
 /* ===========================
         AUTH LAYOUT
 =========================== */
@@ -1285,19 +1298,38 @@ animation:fadeUp .7s ease;
     );
 
     color:#fff;
+>>>>>>> f8f41e311d4b48a07ea3678ce7fceb3d53c90b43
 
     border:none;
 
     border-radius:12px;
 
+<<<<<<< HEAD
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #7c3aed
+    );
+
+    color:white;
+
+    font-size:16px;
+=======
     padding:10px 18px;
 
     font-size:14px;
+>>>>>>> f8f41e311d4b48a07ea3678ce7fceb3d53c90b43
 
     font-weight:600;
 
     cursor:pointer;
 
+<<<<<<< HEAD
+    box-shadow:
+    0 8px 20px rgba(37,99,235,0.25);
+
+    transition:0.3s;
+=======
     transition:all .30s ease;
 
     box-shadow:
@@ -1349,10 +1381,19 @@ animation:fadeUp .7s ease;
         flex-wrap:wrap;
 
     }
+>>>>>>> f8f41e311d4b48a07ea3678ce7fceb3d53c90b43
 
 }
 
 
+<<<<<<< HEAD
+.recommend-button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 12px 25px rgba(124,58,237,0.35);
+=======
 /* ===========================
         SCROLLBAR
 =========================== */
@@ -1599,5 +1640,6 @@ width:100%;
 gap:15px;
 
 }
+>>>>>>> f8f41e311d4b48a07ea3678ce7fceb3d53c90b43
 
 }

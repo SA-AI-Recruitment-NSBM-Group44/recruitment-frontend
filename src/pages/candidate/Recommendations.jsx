@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import client from "../../api/client";
 import MatchScoreBadge from "../../components/MatchScoreBadge.jsx";
+import Navbar from "../../components/Navbar.jsx";
 import "./Recommendations.css";
 
 export default function Recommendations() {
@@ -23,6 +24,7 @@ export default function Recommendations() {
   if (loading) {
     return (
       <div className="recommendation-page">
+        <Navbar />
         <div className="page-header">
           <h1>🤖 Jobs picked for you</h1>
           <p>AI is analyzing your profile...</p>
@@ -37,6 +39,7 @@ export default function Recommendations() {
   if (jobs.length === 0) {
     return (
       <div className="recommendation-page">
+        <Navbar />
         <div className="empty-card">
           <h2>📄 Upload a CV to unlock recommendations</h2>
           <p>Add your resume and let AI find suitable jobs for you.</p>
@@ -47,6 +50,7 @@ export default function Recommendations() {
 
   return (
     <div className="recommendation-page">
+      <Navbar />
       <div className="page-header">
         <h1>🤖 Jobs picked for you</h1>
         <p>AI-powered job recommendations based on your skills and CV</p>
